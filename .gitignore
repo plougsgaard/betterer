@@ -39,3 +39,9 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+
+# Test
+.nyc_output
+
+# Keystore
+*.keystore
