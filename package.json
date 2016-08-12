@@ -57,14 +57,14 @@
   },
   "ava": {
     "files": [
-      "Tests/**/*.js",
-      "!Tests/Setup.js"
+      "tests/**/*.js",
+      "!tests/Setup.js"
     ],
     "require": [
       "babel-register",
       "babel-polyfill",
       "react-native-mock/mock",
-      "./Tests/Setup"
+      "./tests/Setup"
     ],
     "babel": "inherit"
   },

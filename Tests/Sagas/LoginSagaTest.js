@@ -1,8 +1,8 @@
 import test from 'ava'
 import { take, call, put } from 'redux-saga/effects'
-import { attemptLogin, watchLoginAttempt } from '../../App/Sagas/LoginSaga'
-import Types from '../../App/Actions/Types'
-import Actions from '../../App/Actions/Creators'
+import { attemptLogin, watchLoginAttempt } from '../../src/Sagas/LoginSaga'
+import Types from '../../src/Actions/Types'
+import Actions from '../../src/Actions/Creators'
 
 const stepper = (fn) => (mock) => fn.next(mock).value
 

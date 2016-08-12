@@ -1,6 +1,6 @@
 import test from 'ava'
-import API from '../../App/Services/Api'
-import FixtureAPI from '../../App/Services/FixtureApi'
+import API from '../../src/Services/Api'
+import FixtureAPI from '../../src/Services/FixtureApi'
 import R from 'ramda'
 
 test('All fixtures map to actual API', t => {

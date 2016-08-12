@@ -1,6 +1,6 @@
 import test from 'ava'
-import reducer, { INITIAL_STATE } from '../../App/Reducers/LoginReducer'
-import Actions from '../../App/Actions/Creators'
+import reducer, { INITIAL_STATE } from '../../src/Reducers/LoginReducer'
+import Actions from '../../src/Actions/Creators'
 
 test('attempt', t => {
   const state = reducer(INITIAL_STATE, Actions.attemptLogin('u', 'p'))

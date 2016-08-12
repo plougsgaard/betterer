@@ -1,7 +1,7 @@
 import test from 'ava'
 import { take } from 'redux-saga/effects'
-import { watchStartup } from '../../App/Sagas/StartupSaga'
-import Types from '../../App/Actions/Types'
+import { watchStartup } from '../../src/Sagas/StartupSaga'
+import Types from '../../src/Actions/Types'
 
 const stepper = (fn) => (mock) => fn.next(mock).value
 

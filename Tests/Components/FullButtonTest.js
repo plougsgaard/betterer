@@ -1,6 +1,6 @@
 import test from 'ava'
 import React from 'react'
-import FullButton from '../../App/Components/FullButton'
+import FullButton from '../../src/Components/FullButton'
 import { shallow } from 'enzyme'
 
 test('component exists', t => {
