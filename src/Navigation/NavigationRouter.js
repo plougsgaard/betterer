@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { Scene, Router } from 'react-native-router-flux'
 import Styles from './Styles/NavigationContainerStyle'
 import NavigationDrawer from './NavigationDrawer'
-import NavItems from './NavItems'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { Metrics, Colors } from '../Themes'
+
+import MenuButton from './MenuButton'
+import BackButton from './BackButton'
 
 // screens identified by the router
 import PresentationScreen from '../Containers/PresentationScreen'
@@ -26,9 +28,20 @@ class NavigationRouter extends Component {
   render () {
     return (
       <Router>
-        <Scene key='drawer' component={NavigationDrawer}>
-          <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>
-            <Scene initial key='presentationScreen' component={PresentationScreen} title='Ignite' renderLeftButton={NavItems.hamburgerButton} />
+        <Scene
+          key='drawer'
+          component={NavigationDrawer}
+          passProps={true}
+          renderBackButton={BackButton}
+        >
+          <Scene
+            key='drawerChildrenWrapper'
+            navigationBarStyle={Styles.navBar}
+            titleStyle={Styles.title}
+            leftButtonIconStyle={Styles.leftButton}
+            rightButtonTextStyle={Styles.rightButton}
+          >
+            <Scene initial key='presentationScreen' component={PresentationScreen} title='Ignite' renderBackButton={MenuButton} />
             <Scene key='componentExamples' component={AllComponentsScreen} title='Components' />
             <Scene key='usageExamples' component={UsageExamplesScreen} title='Usage' rightTitle='Example' onRight={() => window.alert('Example Pressed')} />
             <Scene key='login' component={LoginScreen} title='Login' hideNavBar />
