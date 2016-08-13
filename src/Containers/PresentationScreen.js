@@ -21,18 +21,28 @@ class PresentationScreen extends React.Component {
   render () {
     return (
       <View style={styles.mainContainer}>
-        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
+
         <ScrollView style={styles.container}>
           <View style={styles.centered}>
             <Image source={Images.clearLogo} style={styles.logo} />
           </View>
 
-          <View style={styles.section} >
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle} >
+              Understand nothing?
+            </Text>
             <Text style={styles.sectionText} >
               Default screens for development, debugging, and alpha testing
               are available below.
             </Text>
           </View>
+
+          <View style={styles.centered}>
+            <Text style={styles.subtitle} >
+              And it's not for fun!
+            </Text>
+          </View>
+
 
           <RoundedButton onPress={this.props.componentExamples}>
             Component Examples Screen

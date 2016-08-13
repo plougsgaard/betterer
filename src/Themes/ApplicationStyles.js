@@ -27,19 +27,19 @@ const ApplicationStyles = {
     section: {
       margin: Metrics.section,
       padding: Metrics.baseMargin,
-      borderTopColor: Colors.frost,
-      borderTopWidth: 0.5,
-      borderBottomColor: Colors.frost,
+      borderTopColor: Colors.ricePaper,
+      borderTopWidth: 1,
+      borderBottomColor: Colors.ricePaper,
       borderBottomWidth: 1
     },
     sectionText: {
-      color: Colors.snow,
+      color: Colors.panther,
       marginVertical: Metrics.smallMargin,
       textAlign: 'center',
       fontWeight: 'bold'
     },
     subtitle: {
-      color: Colors.snow,
+      color: Colors.panther,
       padding: Metrics.smallMargin,
       marginBottom: Metrics.smallMargin,
       marginHorizontal: Metrics.smallMargin
