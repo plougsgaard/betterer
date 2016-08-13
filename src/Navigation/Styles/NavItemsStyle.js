@@ -1,5 +1,5 @@
 import { Platform, StyleSheet } from 'react-native'
-import { Metrics, Colors } from '../../Themes/'
+import { Metrics } from '../../Themes/'
 
 export default StyleSheet.create({
   navButtonLeft: Platform.select({

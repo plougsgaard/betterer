@@ -26,11 +26,9 @@ class NavigationDrawer extends Component {
         styles={Styles}
         tapToClose
         type='overlay'
-        tapToClose={true}
         openDrawerOffset={0.2} // 20% gap on the right side of drawer
         panCloseMask={0.2}
         closedDrawerOffset={-3} // magic number?
-        styles={Styles}
         tweenHandler={(ratio) => ({
           main: { opacity: (2 - ratio) / 2 }
         })}

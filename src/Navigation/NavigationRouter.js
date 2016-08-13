@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { Scene, Router } from 'react-native-router-flux'
 import Styles from './Styles/NavigationContainerStyle'
 import NavigationDrawer from './NavigationDrawer'
-import Icon from 'react-native-vector-icons/Ionicons'
-import { Metrics, Colors } from '../Themes'
 
 import MenuButton from './MenuButton'
 import BackButton from './BackButton'
@@ -31,7 +29,7 @@ class NavigationRouter extends Component {
         <Scene
           key='drawer'
           component={NavigationDrawer}
-          passProps={true}
+          passProps
           renderBackButton={BackButton}
         >
           <Scene

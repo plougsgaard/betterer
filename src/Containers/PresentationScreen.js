@@ -43,7 +43,6 @@ class PresentationScreen extends React.Component {
             </Text>
           </View>
 
-
           <RoundedButton onPress={this.props.componentExamples}>
             Component Examples Screen
           </RoundedButton>
