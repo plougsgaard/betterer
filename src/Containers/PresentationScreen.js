@@ -3,6 +3,7 @@ import { ScrollView, Text, Image, View } from 'react-native'
 import { Images } from '../Themes'
 import { connect } from 'react-redux'
 import RoundedButton from '../Components/RoundedButton'
+import { CardItem, CardContainer } from '../Components/MaterialCard'
 import { Actions as NavigationActions } from 'react-native-router-flux'
 
 // Styles
@@ -20,55 +21,9 @@ class PresentationScreen extends React.Component {
 
   render () {
     return (
-      <View style={styles.mainContainer}>
-
-        <ScrollView style={styles.container}>
-          <View style={styles.centered}>
-            <Image source={Images.clearLogo} style={styles.logo} />
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle} >
-              Understand nothing?
-            </Text>
-            <Text style={styles.sectionText} >
-              Default screens for development, debugging, and alpha testing
-              are available below.
-            </Text>
-          </View>
-
-          <View style={styles.centered}>
-            <Text style={styles.subtitle} >
-              And it's not for fun!
-            </Text>
-          </View>
-
-          <RoundedButton onPress={this.props.componentExamples}>
-            Component Examples Screen
-          </RoundedButton>
-
-          <RoundedButton onPress={this.props.usageExamples}>
-            Usage Examples Screen
-          </RoundedButton>
-
-          <RoundedButton onPress={this.props.apiTesting}>
-            API Testing Screen
-          </RoundedButton>
-
-          <RoundedButton onPress={this.props.theme}>
-            Theme Screen
-          </RoundedButton>
-
-          <RoundedButton onPress={this.props.deviceInfo}>
-            Device Info Screen
-          </RoundedButton>
-
-          <View style={styles.centered}>
-            <Text style={styles.subtitle}>Made with ❤️ by Infinite Red</Text>
-          </View>
-
-        </ScrollView>
-      </View>
+      <CardContainer>
+        <CardItem imageSource={Images.backgrounds.berries} />
+      </CardContainer>
     )
   }
 }

@@ -22,15 +22,33 @@ import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
 * Documentation: https://github.com/aksonov/react-native-router-flux
 ***************************/
 
+const getSceneStyle = (/* NavigationSceneRendererProps */ props, computedProps) => {
+  const style = {
+    flex: 1,
+    backgroundColor: '#F1F1F1',
+    shadowColor: null,
+    shadowOffset: null,
+    shadowOpacity: null,
+    shadowRadius: null
+  }
+  if (computedProps.isActive) {
+    style.marginTop = computedProps.hideNavBar ? 0 : 64
+    style.marginBottom = computedProps.hideTabBar ? 0 : 50
+  }
+  return style
+}
+
 class NavigationRouter extends Component {
   render () {
     return (
-      <Router>
+      <Router getSceneStyle={getSceneStyle}>
         <Scene
           key='drawer'
           component={NavigationDrawer}
-          passProps
           renderBackButton={BackButton}
+          passProps /* pass the renderBackButton to child scenes */
+          hideNavBar={false}
+          hideTabBar
         >
           <Scene
             key='drawerChildrenWrapper'
